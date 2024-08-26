@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import GlobalStyle from './GlobalStyle';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home/Home';
+import UserProfile from './pages/Profile/UserProfile';
+import CompanyProfile from './pages/Profile/CompanyProfile';
+import AdList from './pages/Ads/AdList';
+import AdDetails from './pages/Ads/AdDetails';
+import Chat from './pages/Chat/Chat';
+import Payment from './pages/Payment/Payment';
+import Rates from './pages/Rates/Rates';
+import OtherMarketing from './pages/OtherMarketing/OtherMarketing';
+import Settings from './pages/Settings/Settings';
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <GlobalStyle />
+      <Header />
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/profile" exact component={UserProfile} />
+        <Route path="/profile/company" component={CompanyProfile} />
+        <Route path="/ads" exact component={AdList} />
+        <Route path="/ads/:id" component={AdDetails} />
+        <Route path="/chat" component={Chat} />
+        <Route path="/payment" exact component={Payment} />
+        <Route path="/rates" component={Rates} />
+        <Route path="/other-marketing" component={OtherMarketing} />
+        <Route path="/settings" component={Settings} />
+      </Switch>
+    </Router>
+  );
+};
 
-export default App
+export default App;
