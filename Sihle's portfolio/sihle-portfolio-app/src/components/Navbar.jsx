@@ -10,13 +10,13 @@ const Navbar = () => {
             <img src=''></img>
           </div>
           <div className="links">
-               <Link className='link' to={}>
+               <Link className='link' to={fdff}>
                <h6>Projects</h6>
                </Link>
-               <Link className='link' to={}>
+               <Link className='link' to={fff}>
                <h6>Contact</h6>
                </Link>
-               <Link className='link' to={}>
+               <Link className='link' to={ffd}>
                <h6>About</h6>
                </Link>
             

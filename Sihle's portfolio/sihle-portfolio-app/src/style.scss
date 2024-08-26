@@ -7,17 +7,112 @@
             color: inherit;
         }
         //Projects
-        .projects{
-        display: flex;
-        
-
+        .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; // Space between projects
+  
+    .project {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+  
+      .project-image {
+        flex: 1;
+        img {
+          width: 100%;
+          max-width: 300px; // Adjust size as needed
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px; // Optional: adds rounded corners
         }
+      }
+  
+      .project-details {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+  
+        h2 {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+  
+        p {
+          font-size: 16px;
+          margin-bottom: 15px;
+        }
+  
+        .read-more {
+          font-size: 16px;
+          color: teal;
+          text-decoration: none;
+          font-weight: 600; // Slightly bold
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+       }
+  
         
         //Contact
+        .contacts {
+    padding: 20px;
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+    }
+    form {
+      margin-top: 20px;
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+      div {
+        margin-bottom: 10px;
+        label {
+          font-size: 16px;
+          display: block;
+          margin-bottom: 5px;
+        }
+        input, textarea {
+          width: 100%;
+          padding: 10px;
+          font-size: 14px;
+        }
+      }
+      button {
+        padding: 10px 20px;
+        background-color: teal;
+        color: white;
+        border: none;
+        cursor: pointer;
+        &:hover {
+          background-color: darkcyan;
+        }
+      }
+    }
+        }
+  
 
 
 
-        //About
+        //About 
         .about{
             display: flex;
             align-items: center;
