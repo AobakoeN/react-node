@@ -6,6 +6,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
+import './style.scss'; // Adjust the path to your SCSS file
+
 
 const Layout = () => {
   return (
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: "Home",
         element: <Home />
       },
       {

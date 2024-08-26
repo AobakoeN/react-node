@@ -140,45 +140,70 @@
 
         }
 
-        //Navbar
-        .navbar{
-            .container{
-                padding: 10px 0px;
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgb(90, 202, 202); /* Background color for the navbar */
+          
+            .container {
+              display: flex;
+              align-items: center;
+              padding: 10px;
+              
+              /* Ensure the logo stays on the left side and the links are centered */
+              .logo {
+                flex: 1; /* Allow the logo to take its natural width */
+                
+                img {
+                  width: 150px; /* Adjust this value as needed */
+                  height: auto; /* Maintain aspect ratio */
+                }
+              }
+          
+              .links {
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
-                .logo{
-                    img{
-                        width: 120px;
+                margin-left: 70px;
+                gap: 100px;
+                flex: 1; /* Allow links to take available space and be centered */
+                justify-content: center; /* Center the links horizontally within its container */
+                a {
+                    text-decoration: none; /* Remove default underline from links */
+                    color: black; /* Set default text color for links */
+                    font-size: 20px;
+                    font-weight: 400;
+                    transition: font-weight 0.3s ease; /* Smooth transition effect */
+                    
+                    &:hover,
+                    &:focus {
+                      font-weight: bold; /* Make text bold on hover or focus */
+                      color: darkblue; /* Optional: Change text color on hover or focus */
                     }
                 }
-                .links{
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-
-                    h6{
-                       font-size: 16px;
-                       font-weight: 300; 
-                    }
+                h6 {
+                  font-size: 30px;
+                  font-weight: 400;
                 }
+              }
             }
-        }
-
-        //Footer
-        footer{
-
-            margin-top: 100px;
-            padding: 30px;
-            background-color: aquamarine;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-size: 12px;
-            img{
-                height: 50px;
-            }
-        }
+          }
+          
+  
+  /* Footer Styles */
+  footer {
+    padding: 30px;
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 50px;
+  
+    img {
+      height: 40px; /* Adjust this value as needed */
+      width: auto; /* Maintain aspect ratio */
+    }
+  }
+  
 
         //Home page
         .home{
@@ -213,7 +238,7 @@
                         }
                         img{
                             width: 100%;
-                            max-height: 400px;
+                            max-height: 300px;
                             object-fit: cover;
                         }
                     }
