@@ -5,12 +5,13 @@
   "type": "module",
   "homepage": "https://sphesihle-mnyandu-portfolio.com",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build"
+    
   },
   "dependencies": {
     "react": "^18.3.1",
