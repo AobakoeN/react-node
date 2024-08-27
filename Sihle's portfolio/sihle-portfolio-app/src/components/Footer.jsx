@@ -1,4 +1,4 @@
-import Logo from "../assets/images/enhanced_image.jpg"
+import Logo from "../assets/images/Portfolio.png"
 
 function Footer(){
 return(

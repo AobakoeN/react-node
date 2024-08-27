@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Route, Outlet } from "react-router-dom"; // Added Outlet import
+import { createBrowserRouter, RouterProvider, Route, Outlet } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
@@ -7,7 +7,6 @@ import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import './style.scss'; // Adjust the path to your SCSS file
-
 
 const Layout = () => {
   return (
@@ -21,11 +20,11 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/",  // This will now be the default route
     element: <Layout />,
     children: [
       {
-        path: "Home",
+        path: "/",  // Set Home as the default child route
         element: <Home />
       },
       {
